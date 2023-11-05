@@ -23,8 +23,24 @@
         <sonar.password>admin1</sonar.password>
     </properties>
 
+    <!-- Ajoutez la section <servers> ici -->
+    <servers>
+        <server>
+            <id>deploymentRepo</id>
+            <username>admin</username>
+            <password>admin1</password>
+        </server>
+    </servers>
+
     <dependencies>
-        <!-- Vos dépendances ici -->
+        <!-- Ajoutez vos dépendances ici (par exemple, pour Spring Boot) -->
+        <!--
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.5.3</version>
+        </dependency>
+        -->
     </dependencies>
 
     <build>
@@ -36,7 +52,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>3.1.0</version> <!-- adjust version as needed -->
+                <version>3.1.0</version> <!-- ajustez la version au besoin -->
             </plugin>
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
