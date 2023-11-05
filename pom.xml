@@ -24,13 +24,7 @@
     </properties>
 
     <!-- Ajoutez la section <servers> ici -->
-    <servers>
-        <server>
-            <id>deploymentRepo</id>
-            <username>admin</username>
-            <password>admin1</password>
-        </server>
-    </servers>
+    
 
     <dependencies>
         <!-- Ajoutez vos dépendances ici (par exemple, pour Spring Boot) -->
