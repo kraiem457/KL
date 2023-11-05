@@ -4,6 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.3</version>
+        <relativePath /> <!-- lookup parent from repository -->
+    </parent>
+
     <groupId>com.esprit.examen</groupId>
     <artifactId>tpAchatProject</artifactId>
     <version>1.0</version>
@@ -11,26 +18,23 @@
     <description>tpAchatProject</description>
 
     <properties>
-        <java.version>1.8</java.version>
-        <springfox.version>2.11.0</springfox.version>
+        <sonar.host.url>http://192.168.33.10:9000/</sonar.host.url>
+        <sonar.login>admin</sonar.login>
+        <sonar.password>admin1</sonar.password>
     </properties>
 
+    <!-- Ajoutez la section <servers> ici -->
+    
+
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
+        <!-- Ajoutez vos dépendances ici (par exemple, pour Spring Boot) -->
+        <!--
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.5.3</version>
         </dependency>
-        <!-- Supprimez la dépendance springfox-swagger2 si vous ne l'utilisez pas -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>${springfox.version}</version>
-        </dependency>
-        <!-- Ajoutez d'autres dépendances selon les besoins de votre projet -->
+        -->
     </dependencies>
 
     <build>
@@ -38,6 +42,16 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version> <!-- ajustez la version au besoin -->
+            </plugin>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.10.0.2594</version> <!-- Essayez la dernière version disponible -->
             </plugin>
         </plugins>
     </build>
@@ -50,4 +64,3 @@
         </repository>
     </distributionManagement>
 </project>
-
