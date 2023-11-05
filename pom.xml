@@ -14,11 +14,10 @@
 	<name>tpAchatProject</name>
 	<description>tpAchatProject</description>
 	<properties>
-		<java.version>11.0.20.1</java.version>
-		<maven-jar-plugin.version>3.6.3</maven-jar-plugin.version>
-		<sonar.host.url>http://192.168.33.10:9000</sonar.host.url>
-		<sonar.login>admin</sonar.login>
-	</properties>
+    <sonar.host.url>http://192.168.33.10:9000/</sonar.host.url>
+    <sonar.login>admin</sonar.login>
+    <sonar.password>admin1</sonar.password>
+</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
